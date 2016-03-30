@@ -79,6 +79,7 @@ function sass() {
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass
+      //outputStyle: 'compressed'
     })
       .on('error', $.sass.logError))
     .pipe($.autoprefixer({
